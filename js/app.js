@@ -18,12 +18,11 @@ const checkUsername = () => {
     if(!isRequired(username)) {
         showError(usernameEl, 'Username cannot be blank.');
     } else if (!isBetween(username.length, min, max)) {
-        showError(usernameEl, 'Username must be between ${min} and ${max} characters.')
+        showError(usernameEl, `Username must be between ${min} and ${max} characters.`)
     }else {
         showError(usernameEl);
-        valid = true
+        valid = true;
     }
-
     return valid;
 };
 
@@ -146,9 +145,9 @@ const debounce = (fn, delay = 1) => {
             clearTimeout(timeoutId);
         }
         //setup a new timer
-        timeoutId = setTimeout(() = {
-            fn.apply(null, args)
-        }, delay);
+        timeoutId = setTimeout(() => {
+            fn.apply(null,args)
+        }, delay)
     };
 };
 
