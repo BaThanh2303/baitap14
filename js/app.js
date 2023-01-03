@@ -20,7 +20,7 @@ const checkUsername = () => {
     } else if (!isBetween(username.length, min, max)) {
         showError(usernameEl, `Username must be between ${min} and ${max} characters.`)
     }else {
-        showError(usernameEl);
+        showSuccess(usernameEl);
         valid = true;
     }
     return valid;
